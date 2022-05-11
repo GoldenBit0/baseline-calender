@@ -31,6 +31,25 @@ Give name of associated BLIP with a hyperlink.
 The idea is to have a smart contract which will store a mapping that have addresses against available time / default available time of the address. This would then be matched with other address's availability and most recent time slot would be alloted to both the parties. 
 There would also be a beautiful UI which would allow users to set availability times and match it with other addresses given that they have allowed them to do so. 
 
+### Tech Stack
+- [ ] ReactJS (frontend)
+- [ ] ExpressJS (backend)
+- [ ] Blockchain (Gananche)
+- [ ] Zero Knowledge Proof verifier (Circom + SnarkJS)
+- [ ] (optional) Kafka Pub / Sub to verify proof whenever seeker sends and confirm it (not necessary, only to make it real time, can be done via APIs)
+
+Lets' say there are two people, appointment Seeker (sk) [the person who is seeking an appointment]  and interview lister [the person who is listing the interview that is sharing their calendly links in more traditional sense] 
+
+Here is how it would work, 
+
+- lister lists the available time slots 
+- lister shares the link publicly
+- seeker signs in on the link available 
+- seeker selects multiple times that he / she is available 
+- seeker uses appointment time, and address to generate proof
+- seeker sends proof to lister 
+- lister verfies the proof with two outcomes - appointment scheduled or appointment denied. 
+
 ---
 
 ## Deliverables / Schedule / Milestones
@@ -44,11 +63,14 @@ Create a frontend which would be pleasing and appealing to the end user. Mainly 
 - [ ] Set time availability default 
 - [ ] Set appointment with someone
 
-**Milestone 2** (40%)
+**Milestone 2** (30%)
 Create smart contract which would have time availability in encrypted format and matching can happen for two different addresses. 
 
 **Milestone 3** (30%)
-Integration of newly created smart contracts and testing, documentation of the project. 
+Create the circuit (circom) and use SNARK.JS to create a way to verify. 
+
+**Milestone 3** (10%)
+Testing of the contracts, documentation of the project. 
 
 
 
@@ -59,8 +81,8 @@ Provide proposed amount that should be paid (in USD) for the grant work, with de
 Feel free to use suggested amount provided in the BLIP, or adjust according to the scope of your proposed project.
 
 
-**4000$**
-The proposed work would require serious developer hours and would need time and effort to justify the 4000$. 
+**6000$**
+The proposed work would require serious developer hours and would need time and effort to justify the 6000$. 
 
 
 ---

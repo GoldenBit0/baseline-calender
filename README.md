@@ -69,7 +69,7 @@ Create smart contract which would have time availability in encrypted format and
 **Milestone 3** (30%)
 Create the circuit (circom) and use SNARK.JS to create a way to verify. 
 
-**Milestone 3** (10%)
+**Milestone 4** (10%)
 Testing of the contracts, documentation of the project. 
 
 
